@@ -1,0 +1,162 @@
+<html>
+<head>
+    <title>ALUMNI EVENTS</title>
+     <link rel = "icon" href =
+"h.jpg"
+        type = "image/x-icon">
+    <script src="jquerystored.js"></script>
+    <style>
+        h1{
+               background-color: orange;
+               align-items: stretch;
+               animation:move;     
+           }
+        form{
+            font-size: 25px;
+            float:left;
+
+        }
+        iframe{
+            float:center;
+            width:600px;
+            height:300px;
+            padding-right: 100px;
+            
+        }
+        
+        button{
+            font-size: 20px;
+        }
+        body{
+            font-size: 20px;
+        }
+        input{
+            
+        }
+    </style>
+    <script>
+    function f1{
+        document.getElementById('b1').innerHTML()
+    }
+    
+    
+    
+    </script>
+        <script src="style.css"></script>
+
+    </head><body>
+     <h1><img src="admin-login-icon.jpg" width="90px" height="90px">
+            <br><b>ADMIN</b><br></h1>
+        <br><br><br><br>
+    <button type="button" id="formButton">INSERT</button>
+    <button type="button" id="formButton1">DELETE</button>
+    <button type="button" id="formButton2">MODIFY</button>
+    <button type="button" id="formButton3">SEARCH</button>
+<br>
+<form name="f1" method="post" action="evtinsert.php" id="f1">
+        <table>
+            <tr>
+                <td>event id :</td><td><input type="text" name="id" value="" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>event name :</td><td><input type="text" name="name" value="" required />
+                </td>
+            </tr>
+            <tr>
+                <td>event date :</td><td><input type="date" name="date" value="" required />
+                </td>
+            </tr>
+            <tr>
+                <td>event venue :</td><td><input type="text" name="venue" value="" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="login" value="INSERT" style="font-size:18px; " />
+                </td>
+            </tr>
+        </table>
+    </form> 
+<style>
+#login_form {
+    position: absolute;
+    font-size: 28px;
+}
+
+#f1 {
+    background-color:white;
+    
+}
+.f1_label {
+    white-space: nowrap;
+}
+</style>
+
+    <form name="f2" method="post" action="evtdelete.php" id="f2">
+        <table>
+            <tr>
+                <td class="f1_label">event id :</td><td><input type="text" name="evid" value="" required />
+                </td>
+            </tr>    
+            <tr>
+                <td>
+                    <input type="submit" name="login" value="DELETE" style="font-size:18px; " />
+                </td>
+            </tr>
+        </table>
+    </form> 
+    <br><br>
+          <form id="form3" action="evtupdate.php" method="post">
+        Event id to update: <input type="text" name="eid" required><br><br>
+        Event name to update: <input type="text" name="ename" required><br><br>
+        Event date to update: <input type="date" name="edate" required><br><br>
+        Event venue to update: <input type="text" name="evenue" required><br><br>
+          <input type="submit" name="update" value="Update data">
+         </form>
+     <form name="form4" method='POST' action="alselect.php" id="form4">
+        <table>
+            <tr>
+                <td class="f1_label">event id :</td><td><input type="text" name="evtid" value="" required/>
+                </td>
+            </tr>        
+            <tr>
+                <td>
+                    <input type="submit" name="login" value="SELECT" style="font-size:18px; " />
+                </td>
+            </tr>
+        </table>
+    </form> 
+    <style>
+form {
+  padding: 15px;
+  border: 1px solid #666;
+  background: #fff;  
+  display: none;
+}
+</style>
+    <script>
+$(document).ready(function() {
+  $("#formButton").click(function() {
+    $("#f1").toggle();
+  });
+});
+        $(document).ready(function() {
+  $("#formButton1").click(function() {
+    $("#f2").toggle();
+  });
+});
+        $(document).ready(function() {
+  $("#formButton2").click(function() {
+    $("#form3").toggle();
+  });
+});
+        $(document).ready(function() {
+  $("#formButton3").click(function() {
+    $("#form4").toggle();
+  });
+});
+</script>
+
+</body>
+</html>
